@@ -1,6 +1,6 @@
 %h1 Listing pages
 
-%table
+%table.table
   %thead
     %tr
       %th Title
@@ -13,7 +13,7 @@
   %tbody
     - @pages.each do |page|
       %tr
-        %td= page.title
+        %td= link_to page.title, url_for_page(page)
         %td= page.body
         %td= url_for_page page
         %td= link_to 'Show', admin_page_path(page)
