@@ -9,6 +9,12 @@
   .field
     = f.label :title
     = f.text_field :title
+  %h3 Custom fields
+  =f.fields_for :fields do |c|
+    %p
+      =c.label :value, c.object.field_definition.key
+      =c.text_field :value
+      =c.hidden_field :field_definition
   .field
     = f.label :body
     = f.cktext_area :body
