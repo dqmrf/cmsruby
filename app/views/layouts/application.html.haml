@@ -3,15 +3,15 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Cmsruby
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    =stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    =javascript_include_tag 'application', 'data-turbolinks-track' => true
     %script{:crossorigin =>  'anonymous', :integrity => 'sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', :src => 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'}
-    = csrf_meta_tags
+    =csrf_meta_tags
   %body
-    = render "admin_nav"
+    =render "admin_nav"
     .container
       -if notice
         %p.notice.alert.alert-success=notice
       -if alert
         %p.alert.alert-danger=alert
-      = yield
+      =yield

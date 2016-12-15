@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Cmsruby
+    =csrf_meta_tags
+  %body
+    =render template: "_nav"
+    .container
+      -if notice
+        %p.notice.alert.alert-success=notice
+      -if alert
+        %p.alert.alert-danger=alert
+      =yield
